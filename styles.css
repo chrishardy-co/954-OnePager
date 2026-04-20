@@ -1006,8 +1006,7 @@ body.zine-contrast .btn-secondary:focus-visible {
   .brand-title { min-height: 40px; font-size: 1.2rem; }
   .home video,
   .onepage-hero video {
-    object-position: 62% center;
-    transform: translateX(70px);
+    object-position: calc(50% + 70px) center;
   }
   .home-content { padding-top: 50px; padding-bottom: 50px; }
   .onepage-hero-content { padding-top: 50px; padding-bottom: 50px; }

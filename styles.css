@@ -127,7 +127,7 @@ img, video, iframe { max-width: 100%; display: block; }
 }
 .nav a {
   position: relative;
-  padding: 6px 0;
+  padding: 15px 0;
   color: var(--ink);
 }
 .nav a.active::after {
@@ -195,7 +195,7 @@ img, video, iframe { max-width: 100%; display: block; }
   letter-spacing: .18em;
   text-transform: uppercase;
   margin-bottom: 18px;
-  color: var(--ink);
+  color: #ffffff;
 }
 .eyebrow .ast { color: var(--accent); font-style: italic; }
 
@@ -982,16 +982,20 @@ body.zine-contrast .btn-secondary:focus-visible {
 @media (max-width: 700px) {
   .container { width: min(var(--max), calc(100% - 12vw)); }
   .header-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .nav { padding-left: 52px; }
   .nav { gap: 14px 22px; justify-content: flex-start; }
   .brand img { width: 40px; height: 40px; }
   .brand-mark { width: 40px; height: 40px; }
   .brand-title { font-size: 1.2rem; }
-  .home-content { padding-top: 150px; padding-bottom: 140px; }
-  .onepage-hero-content { padding-top: 150px; padding-bottom: 92px; }
-  .onepage-panel { padding: 72px 0; }
+  .home video,
+  .onepage-hero video { object-position: 62% center; }
+  .home-content { padding-top: 50px; padding-bottom: 50px; }
+  .onepage-hero-content { padding-top: 50px; padding-bottom: 50px; }
+  .onepage-panel { padding: 50px 0; }
+  .event { padding-block: 50px; }
   .display { font-size: clamp(2.4rem, 11vw, 3.7rem); line-height: .95; }
   .display .lowcase { font-size: 1.1rem; margin-top: 10px; }
-  .page-head { padding: 44px 0 20px; }
+  .page-head { padding: 50px 0; }
   .page-title { font-size: clamp(2.8rem, 13vw, 4.4rem); }
   .footer-rule { flex-direction: column; align-items: flex-start; }
   .calendar { grid-template-columns: 1fr; }

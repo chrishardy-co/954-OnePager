@@ -84,9 +84,10 @@ img, video, iframe { max-width: 100%; display: block; }
   gap: 24px;
 }
 .brand {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 12px;
+  column-gap: 12px;
   min-width: 0;
 }
 .brand img {
@@ -108,11 +109,15 @@ img, video, iframe { max-width: 100%; display: block; }
   transform-origin: center;
 }
 .brand-title {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
   font-weight: 700;
   font-style: italic;
   font-size: 1.35rem;
   letter-spacing: -.01em;
   line-height: 1;
+  padding-top: 1px;
 }
 .nav {
   display: flex;
@@ -207,6 +212,7 @@ img, video, iframe { max-width: 100%; display: block; }
   letter-spacing: -0.02em;
   margin: 0 0 22px;
   text-shadow: 0 4px 18px rgba(0,0,0,.34);
+  text-wrap: balance;
 }
 .display .ast { color: var(--accent); font-style: italic; }
 .display .lowcase {
@@ -414,6 +420,10 @@ img, video, iframe { max-width: 100%; display: block; }
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, .8fr);
   gap: 32px;
   align-items: end;
+}
+
+.story-copy {
+  max-width: 20ch;
 }
 
 .story-pull {
@@ -646,6 +656,8 @@ body.zine-contrast .btn-secondary:focus-visible {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 18px;
+  text-wrap: balance;
+  max-width: 12ch;
 }
 .page-title .ast { color: var(--accent); font-style: italic; }
 .page-subtitle {
@@ -659,6 +671,11 @@ body.zine-contrast .btn-secondary:focus-visible {
   max-width: 720px;
   color: var(--muted);
   font-size: 1.05rem;
+  text-wrap: pretty;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 /* ---------- History timeline ---------- */
@@ -986,7 +1003,7 @@ body.zine-contrast .btn-secondary:focus-visible {
   .nav { gap: 14px 22px; justify-content: flex-start; }
   .brand img { width: 40px; height: 40px; }
   .brand-mark { width: 40px; height: 40px; }
-  .brand-title { font-size: 1.2rem; }
+  .brand-title { min-height: 40px; font-size: 1.2rem; }
   .home video,
   .onepage-hero video {
     object-position: 62% center;
@@ -1000,6 +1017,10 @@ body.zine-contrast .btn-secondary:focus-visible {
   .display .lowcase { font-size: 1.1rem; margin-top: 10px; }
   .page-head { padding: 50px 0; }
   .page-title { font-size: clamp(2.8rem, 13vw, 4.4rem); }
+  .story-copy,
+  .page-title,
+  .page-intro { max-width: none; }
+  .nowrap { white-space: normal; }
   .footer-rule { flex-direction: column; align-items: flex-start; }
   .calendar { grid-template-columns: 1fr; }
   .qr-side { flex-direction: column; }

@@ -988,7 +988,10 @@ body.zine-contrast .btn-secondary:focus-visible {
   .brand-mark { width: 40px; height: 40px; }
   .brand-title { font-size: 1.2rem; }
   .home video,
-  .onepage-hero video { object-position: 62% center; }
+  .onepage-hero video {
+    object-position: 62% center;
+    transform: translateX(70px);
+  }
   .home-content { padding-top: 50px; padding-bottom: 50px; }
   .onepage-hero-content { padding-top: 50px; padding-bottom: 50px; }
   .onepage-panel { padding: 50px 0; }
